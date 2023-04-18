@@ -1,3 +1,15 @@
 body{
     background-color: #dddbf1;
+    margin-top: 1em;
+}
+
+
+#logo-header{
+    max-width: 70%;
+}
+
+
+.cpu-player-cards{
+    margin-top: 3em;
+    justify-content: space-around;
 }
