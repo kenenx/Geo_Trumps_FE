@@ -32,5 +32,10 @@ body{
 }
 
 .btn{
-    background-color: #8064A2
+    background-color: #8064A2;
+    border: #442220;
+}
+
+.cpu-player-cards img {
+    max-height: 8em;
 }
