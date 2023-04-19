@@ -1,86 +1,55 @@
 body {
-	background-color: #dddbf1;
+    background-color: #DDDBF1;
 }
-
 .container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center; 
-	color: #442220;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-
 .card {
-	background-color: white;
-	padding: 50px;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
 .card-content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 .card-content h2 {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
-
-ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+.list-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
 }
-
-ul li {
-	margin-bottom: 10px;
+.list-group-item {
+    width: 48%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-
-ul li span {
-	display: inline-block;
-	width: 100px;
-	font-weight: bold;
+.list-group-item span {
+    font-weight: bold;
+    margin-left: 10px;
 }
-
-p {
-	margin-bottom: 20px;
-}
-
-input {
-	padding: 10px;
-	border: none;
-	border-radius: 5px;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.earth-btn {
-	display: block;
-	background-color: #ab9f9d;
-	color: white;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	font-size: 18px;
-	font-weight: bold;
-	text-transform: uppercase;
-	cursor: pointer;
-}
-
-.earth-btn:hover {
-	background-color: #4c8c93;
-	transition: background-color 0.2s ease-in-out;
-}
-
 .bubble {
     position: relative;
     width: 200px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #DDDbf1;
+    background-color: #DDDBF1;
     color: #442220;
     font-weight: bold;
     text-align: center;
-  }
-  
+}
