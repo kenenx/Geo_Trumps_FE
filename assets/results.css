@@ -1,6 +1,7 @@
 body{
     background-color: #dddbf1;
     margin-top: 1em;
+    color: #222222;
 }
 
 h2{
@@ -8,9 +9,15 @@ h2{
     text-align: center;
 }
 
+h3{
+    text-align: center;
+    font-size: 4em;
+}
+
 table{
     max-width: 50%;
     text-align: center;
+    margin-top: 1em;
 }
 
 
@@ -28,7 +35,6 @@ table{
 .card-body{
     background-color: #442220;
     color: #dbdbdb;
-    
 }
 
 .result-display{
@@ -42,11 +48,17 @@ table{
 }
 
 .btn{
-    background-color: #8064A2;
+    background-color:#8064A2;
     border: #442220;
+    border-radius: 90px;
+    color: #eeeeee;
 }
 
 .cpu-player-cards img {
     max-width: 95%;
     max-height: 8em;
+}
+
+.footer-row{
+    margin-top: 2em;
 }
