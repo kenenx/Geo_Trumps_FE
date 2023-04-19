@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image" href="./assets/images/favicon.png">
     <link rel="stylesheet" href="index.css">
+    <script defer src="./assets/game.js"></script>
+    <script defer src="./assets/index.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="login-container">
       <div class="login-box">
         <h1>LOGIN</h1>
-        <form>
-          <div class="form-group">
-            <label for="Uname">Username</label>
-            <input type="text" id="Uname" name="Uname">
+        <form >
+          <div class="form-group" >
+            <label for="username">Username</label>
+            <input type="text" id="username" name="Uname">
           </div>
           <div class="form-group">
             <label for="password">Password</label>
             <input type="password" id="password" name="password">
           </div>
-          <button class="earth-btn">Sign In</button>
+          <button id="login-button" class="earth-btn" value="Submit">Sign In</button>
         </form>
         <!-- footer -->
         <div class="container footer-row">
