@@ -23,16 +23,17 @@
     <div class="container">
         <div class="card">
             <div class="card-content">
-                <h2>Country Information</h2>
+                <h2 id="player country">Country Information</h2>
+                <div id="player-flag-image"></div> 
                 <ul class="list-group">
-                    <li id="att-life" class="list-group-item"> Life expectancy <span></span></li>
-                    <li id="att-area" class="list-group-item">Area km<sup>2</sup> <span></span></li>
-                    <li id="att-temp" class="list-group-item">Average temp <sup>o</sup>C <span></span></li>
-                    <li id="att-population" class="list-group-item">Population <span></span></li>
-                    <li id="att-independence" class="list-group-item">Independence year <span></span></li>
+                    <li id="att-life" class="list-group-item"> Life expectancy <span id="att-life" ></span></li>
+                    <li id="att-area" class="list-group-item">Area km<sup>2</sup> <span id="att-area"></span></li>
+                    <li id="att-temp" class="list-group-item">Average temp <sup>o</sup>C <span id="att-temp"></span></li>
+                    <li id="att-population" class="list-group-item">Population <span id="att-population"></span></li>
+                    <li id="att-independence" class="list-group-item">Independence year <span id="att-independence"></span></li>
                 </ul>
                 <div class="bubble">
-                    <p>CPU has: ${country}</p>
+                    <p id="cpu-country">CPU has: ${country}</p>
                 </div>
             </div>
         </div>
