@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="./assets/results.css">
         
         <!-- import js file -->
-        <script defer src="assets/index.js" ></script>
+        <script defer src="assets/compare.js" ></script>
         
         <!-- page title -->
         <title>Player outcome</title>
@@ -35,14 +35,14 @@
                         <div class="card-content">
                             <h5>Player Country Information</h5>
                             <h2 id="player-att-country"></h2>
-                            <div>
+                            <div id="player-flag-image">
                             </div>  
                             <ul class="list-group">
-                                <li class="list-group-item "> Life expectancy <span id="player-att-life"></span></li>
-                                <li class="list-group-item">Area km<sup>2</sup> <span id="player-att-area" ></span></li>
-                                <li class="list-group-item">Average temp <sup>o</sup>C <span id="player-att-temp" ></span></li>
-                                <li class="list-group-item">Population <span id="player-att-population"></span></li>
-                                <li class="list-group-item">Independence year <span id="player-att-independence" ></span></li>
+                                <li class="list-group-item "><strong>Life expectancy - </strong><span id="player-att-life"></span> years </li>
+                                <li class="list-group-item"><strong>Area km<sup>2</sup> - </strong><span id="player-att-area" ></span></li>
+                                <li class="list-group-item"><strong>Average temperature <sup>o</sup>C - </strong><span id="player-att-temp" ></span></li>
+                                <li class="list-group-item"><strong>Population - </strong> <span id="player-att-population"></span></li>
+                                <li class="list-group-item"><strong>Independence year - </strong><span id="player-att-independence" ></span></li>
                             </ul>
                         </div>
                     </div>               
@@ -52,14 +52,14 @@
                         <div class="card-content">
                             <h5>Computer Country Information</h5>
                             <h2 id="cpu-att-country"></h2>
-                            <div id="player-flag-image">
+                            <div id="cpu-flag-image">
                             </div>  
                             <ul class="list-group">
-                                <li class="list-group-item"> Life expectancy <span id="cpu-att-life"></span></li>
-                                <li class="list-group-item">Area km<sup>2</sup> <span id="cpu-att-area" ></span></li>
-                                <li class="list-group-item">Average temp <sup>o</sup>C <span id="cpu-att-temp" ></span></li>
-                                <li class="list-group-item">Population <span id="cpu-att-population"></span></li>
-                                <li class="list-group-item">Independence year <span id="cpu-att-independence" ></span></li>
+                                <li class="list-group-item"><strong>Life expectancy - </strong><span id="cpu-att-life"></span> years</li>
+                                <li class="list-group-item"><strong>Area km<sup>2</sup> - </strong><span id="cpu-att-area" ></span></li>
+                                <li class="list-group-item"><strong>Average temperature <sup>o</sup>C - </strong><span id="cpu-att-temp" ></span></li>
+                                <li class="list-group-item"><strong>Population - </strong>  <span id="cpu-att-population"></span></li>
+                                <li class="list-group-item"><strong>Independence year - </strong><span id="cpu-att-independence" ></span></li>
                             </ul>
                         </div>
                     </div>               
@@ -71,7 +71,7 @@
         <div class="container result-display cpu-player-cards">
             <div class="row">
                 <p class="text-center fs-2">And the winner is:</p>
-                <p id="winner-display" class="text-center fs-1">HELLO</p>
+                <p id="winner-display" class="text-center fs-1"></p>
             </div>
         </div>
 
