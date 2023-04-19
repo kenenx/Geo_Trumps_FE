@@ -45,7 +45,21 @@ table{
 
 .result-display{
     margin-top: 2em;
-    text: 100px;    
+    text: 100px;
+    background-color: #f7f7ff;
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    max-width: 40%;  
+}
+
+.play-again-display{
+    margin-top: 2em;
+    text: 100px;
+    background-color: #f7f7ff;
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    padding-bottom: 1em;
+    max-width: 40%;
 }
 
 .play-again{
@@ -65,7 +79,7 @@ table{
     max-height: 8em;
 }
 
-.card {
+.card{
         background-color: white;
         padding: 2em;
         border-radius: 1em;
@@ -102,6 +116,7 @@ table{
     font-weight: bold;
     margin-left: 10px;
 }
+
 .bubble {
     position: relative;
     width: 200px;
