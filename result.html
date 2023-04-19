@@ -14,7 +14,7 @@
         <script defer src="assets/index.js" ></script>
         
         <!-- page title -->
-        <title>Player outcome</title>
+        <title>Results</title>
     </head>
 
     
@@ -25,66 +25,75 @@
                 <img id="logo-header" class="img-fluid center-block mx-auto" src="./assets/images/Header-logo.png" alt="GeoTrump logo">
             </div>
         </div>
-        
-        <!-- Player and computer cards -->
-        <div class="container">
-            <div class="row cpu-player-cards">
-                <div id="player-card" class="col-5" >
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Country</h5>
-                        </div>
-                        <img class="card-img-top" src="..." alt="Card image cap">
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item att-life"> Life expectancy <span></span></li>
-                          <li class="list-group-item att-area">Area km<sup>2</sup> <span></span></li>
-                          <li class="list-group-item att-temp">Average temp <sup>o</sup>C <span></span></li>
-                          <li class="list-group-item att-pop">Population <span></span></li>
-                          <li class="list-group-item att-independence">Independence year <span></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="cpu-card" class="col-5">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Country</h5>
-                        </div>
-                        <img class="card-img-top" src="..." alt="Card image cap">
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item att-life"> Life expectancy <span></span></li>
-                          <li class="list-group-item att-area">Area km<sup>2</sup> <span></span></li>
-                          <li class="list-group-item att-temp">Average temp <sup>o</sup>C <span></span></li>
-                          <li class="list-group-item att-pop">Population <span></span></li>
-                          <li class="list-group-item att-independence">Independence year <span></span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Results -->
-        <div class="container result-display">
-            <div class="row">
-                <p class="text-center fs-2">And the winner is:  </p>
-                <p id="winner-display" class="text-center fs-1">Username/Computer</p>
-            </div>
+        <!-- Player score -->
+        <div class="container">
+            <h2>Your score:</h2>
+            <h3 id="player-score"></h3>
+        </div>
+        
+        <!-- Scoreboard -->
+        <div class="container">
+            <table class="table table-striped center-block mx-auto">
+                <h2>Scoreboard</h2>
+                <thead>
+                    <tr>
+                        <th scope="col">Positon</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="pos1">
+                        <th scope="row">1</th>
+                        <td id="name1"></td>
+                        <td id="score1"></td>
+                    </tr>
+                    <tr id="pos2">
+                        <th scope="row">2</th>
+                        <td id="name2"></td>
+                        <td id="score2"></td>
+                    </tr>
+                    <tr id="pos3">
+                        <th scope="row">3</th>
+                        <td id="name3"></td>
+                        <td id="score3"></td>
+                    </tr>
+                    <tr id="pos4">
+                        <th scope="row">4</th>
+                        <td id="name4"></td>
+                        <td id="score4"></td>
+                    </tr>
+                    <tr id="pos5">
+                        <th scope="row">5</th>
+                        <td id="name5"></td>
+                        <td id="score5"></td>
+                    </tr>
+                </tbody>
+              </table>
         </div>
 
         <!-- Play again -->
         <div class="container result-display">
-            <div class="row">
-                <p class="text-center fs-2">Play again?</p>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-secondary" type="button">Play again</button>
             </div>
-            <div class="row play-again">
-                <div class="col-5">
-                    <button type="button" class="btn btn-danger btn-lg">No</button>
+        </div>
+
+        <!-- footer -->
+        <div class="container footer-row">
+            <div class="row">
+                <div class="col">
+                    <footer>
+                        Geo-Trump     
+                    </footer>
                 </div>
-                <div class="col-5">
-                    <button type="button" class="btn btn-success btn-lg">Ok</button>
+                <div class="col">
+                    <footer style="text-align: end;">
+                        Designed by @TACK 2023     
+                    </footer>
                 </div>
             </div>
         </div>
-        
-
     </body>
 </html>
