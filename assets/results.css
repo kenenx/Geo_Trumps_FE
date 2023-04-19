@@ -105,12 +105,13 @@ table{
     list-style: none;
 }
 .list-group-item {
-    width: 48%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 0.8em auto;
 }
 .list-group-item span {
     font-weight: bold;
