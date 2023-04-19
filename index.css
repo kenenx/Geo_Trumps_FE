@@ -1,4 +1,12 @@
-body{
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #dddbf1;
 }
 
@@ -6,7 +14,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-grow: 1;
 }
 
 .login-box {
@@ -16,7 +24,7 @@ body{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-h1{
+h1 {
   color: black;
   text-align: center;
 }
@@ -56,11 +64,7 @@ input {
   transition: background-color 0.2s ease-in-out;
 }
 
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; 
-  }
-  
+.footer-row {
+  background-color: #dddbf1;
+  padding: 10px;
+}
