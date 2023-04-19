@@ -3,6 +3,16 @@ body{
     margin-top: 1em;
 }
 
+h2{
+    margin-top: 1em;
+    text-align: center;
+}
+
+table{
+    max-width: 50%;
+    text-align: center;
+}
+
 
 #logo-header{
     max-width: 70%;
