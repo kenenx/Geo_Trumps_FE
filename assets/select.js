@@ -1,3 +1,4 @@
+// Country display elements
 const countryName = document.getElementById('player-country');
 const cpuCountryName = document.getElementById('cpu-country');
 const life = document.getElementById('att-life');
@@ -6,7 +7,30 @@ const temp = document.getElementById('att-temp')
 const population = document.getElementById('att-population');
 const independence = document.getElementById('att-independence');
 
-startGame()
+const user = localStorage.getItem('user');
+if (!user) {
+    window.location.href = '../index.html';
+} else {
+    startGame();
+    addAttributeListeners();
+}
+
+
+
+function addAttributeListeners() {
+    addListener(life, 'life');
+    addListener(area, 'area');
+    addListener(temp, 'temp');
+    addListener(population, 'population');
+    addListener(independence, 'independence');
+}
+
+function addListener(element, attribute) {
+        element.addEventListener('click', function() {
+        localStorage.setItem('choice', attribute);
+        window.location.href = '../compare.html';
+    })
+}
 
 async function startGame() {
 
@@ -17,10 +41,11 @@ async function startGame() {
     while (playerCountry.country === cpuCountry.country) {
         cpuCountry = await fetchCard();
     }
-    console.log(playerCountry);
-    console.log(cpuCountry);
     fillPlayerCountry(playerCountry);
     fillCpuCountry(cpuCountry);
+    localStorage.setItem('playerCountry', playerCountry.country);
+    localStorage.setItem('cpuCountry', cpuCountry);
+
 }
 
 async function fetchCard() {
@@ -40,7 +65,6 @@ async function fetchCard() {
 }
 
 function fillPlayerCountry(newCountry) {
-    console.log(newCountry["expectency"])
     countryName.textContent = newCountry["country"];
     life.textContent = newCountry["expectancy"];
     area.textContent = newCountry["area"];
@@ -52,7 +76,3 @@ function fillPlayerCountry(newCountry) {
 function fillCpuCountry(newCountry) {
     cpuCountryName.textContent = newCountry["country"];
 }
-
-// Things to do
-// ad event listener to country attributes
-// redirect to compare page with name of user and both countries
