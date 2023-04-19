@@ -32,7 +32,7 @@
                 <div id="player-card" class="col-5">
                     <div class="card mx-auto" style="width: 22rem; ">
                         <div class="card-body">
-                            <h5 class="card-title">Country</h5>
+                            <h5 id="att-country" class="card-title">Country</h5>
                         </div>
                         <img class="card-img-top mx-auto" src="./assets/images/flag_uk.png" alt="country flag">
                         <ul class="list-group list-group-flush">
@@ -47,7 +47,7 @@
                 <div id="cpu-card" class="col-5">
                     <div class="card mx-auto" style="width: 22rem;">
                         <div class="card-body">
-                            <h5 class="card-title">Country</h5>
+                            <h5 id="att-country" class="card-title">Country</h5>
                         </div>
                         <img class="card-img-top mx-auto" src="./assets/images/flag_fr.png" alt="country flag">
                         <ul class="list-group list-group-flush">
@@ -65,8 +65,8 @@
         <!-- Results -->
         <div class="container result-display">
             <div class="row">
-                <p class="text-center fs-2">And the winner is:  </p>
-                <p id="winner-display" class="text-center fs-1">Username/Computer</p>
+                <p class="text-center fs-2">And the winner is:</p>
+                <p id="winner-display" class="text-center fs-1"></p>
             </div>
         </div>
 
@@ -76,9 +76,24 @@
                 <p class="text-center fs-2">Play again?</p>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-success" type="button">One more game</button>
-                <button class="btn btn-danger" type="button">See your score</button>
+                <button class="btn btn-secondary" type="button">One more game</button>
+                <button class="btn btn-secondary" type="button">See your score</button>
             </div>
         </div>
+
+        <!-- footer -->
+        <div class="container footer-row">
+            <div class="row">
+                <div class="col">
+                    <footer>
+                        Geo-Trump     
+                    </footer>
+                </div>
+                <div class="col">
+                    <footer style="text-align: end;">
+                        Designed by @TACK 2023     
+                    </footer>
+                </div>
+            </div>
     </body>
 </html>
