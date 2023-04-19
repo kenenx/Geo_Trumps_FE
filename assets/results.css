@@ -30,3 +30,13 @@ body{
     margin-top: .7em;
     justify-content: space-around;
 }
+
+.btn{
+    background-color: #8064A2;
+    border: #442220;
+}
+
+.cpu-player-cards img {
+    max-width: 95%;
+    max-height: 8em;
+}
