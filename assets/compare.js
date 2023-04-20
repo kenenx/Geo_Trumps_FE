@@ -173,6 +173,7 @@ async function compareValues(playerCountry, cpuCountry) {
         if(playerValue < cpuValue){
             let winner = document.getElementById("winner-display")
             winner.textContent = user
+            updateScore(user)
         } else {
             let winner = document.getElementById("winner-display")
             winner.textContent = "Computer"
@@ -181,11 +182,25 @@ async function compareValues(playerCountry, cpuCountry) {
         if(playerValue > cpuValue){
             let winner = document.getElementById("winner-display")
             winner.textContent = user
+            updateScore(user)
         } else {
             let winner = document.getElementById("winner-display")
             winner.textContent = "Computer"
         }
     }
+}
+
+async function updateScore(username) {
+    const options = {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    await fetch(`https://geo-trumps-api.onrender.com/players/${username}`, options)
+    .then(resp => resp.json())
+    .then(data => data)
+    .catch(err => console.log(err))
 }
 
 compareValues(player, cpu)
