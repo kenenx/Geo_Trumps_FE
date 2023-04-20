@@ -2,7 +2,7 @@ const form = document.getElementById('login-form')
 
     const username = document.getElementById("username");
     const password = document.getElementById("password");
-    console.log(`Username: ${username.value}`)
+
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     // Check for username
@@ -17,7 +17,6 @@ form.addEventListener('submit', function(event) {
 })
 
 async function login() {
-    
         // Request options
     const options = {
         method: 'PUT',
@@ -25,16 +24,11 @@ async function login() {
             'Content-Type': 'application/json'
         }
     }
-
-
     // Fetch user data from api
     await fetch(`https://geo-trumps-api.onrender.com/players/${username.value}/${password.value}`, options)
         .then(processResponse)
         .then(data => {
-            console.log(data);
-
             localStorage.setItem('user', data.user);
-
             window.location.href = '../select.html';
         })
         .catch(err => console.log(err))
