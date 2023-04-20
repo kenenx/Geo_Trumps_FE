@@ -68,3 +68,8 @@ input {
   background-color: #dddbf1;
   padding: 10px;
 }
+
+#logo-header{
+  max-width: 40%;
+  margin-top: 1em;
+}

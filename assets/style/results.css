@@ -28,7 +28,7 @@ table{
 
 
 #logo-header{
-    max-width: 70%;
+    max-width: 40%;
     margin-top: 1em;
 }
 
@@ -45,7 +45,7 @@ table{
 
 .result-display{
     margin-top: 2em;
-    text: 100px;
+    font-size: 100px;
     background-color: #f7f7ff;
     border-radius: 1em;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
@@ -54,7 +54,7 @@ table{
 
 .play-again-display{
     margin-top: 2em;
-    text: 100px;
+    font-size: 100px;
     background-color: #f7f7ff;
     border-radius: 1em;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
