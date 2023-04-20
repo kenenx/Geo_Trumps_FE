@@ -1,12 +1,22 @@
+//Check if user has logged in
+const user = localStorage.getItem('user');
+if (!user) {
+    window.location.href = '../index.html';
+} else {
+    fetchPlayerCountryData("Brazil")
+    fetchCpuCountryData("Brazil")
+}
+
+
+//Fetch request from backend
 async function fetchPlayerCountryData(country) {
-    // Request options
     const options = {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         }
     }
-    // Fetch user data from api
+    
     await fetch(`https://geo-trumps-api.onrender.com/countries/${country}`, options)
         .then(res => res.json())
         .then(data => {
@@ -23,14 +33,13 @@ async function fetchPlayerCountryData(country) {
 
 
 async function fetchCpuCountryData(country) {
-    // Request options
     const options = {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         }
     }
-    // Fetch user data from api
+    
     await fetch(`https://geo-trumps-api.onrender.com/countries/${country}`, options)
         .then(res => res.json())
         .then(data => {
@@ -47,7 +56,7 @@ async function fetchCpuCountryData(country) {
 
 
 
-//Import flag from db
+//Import country information from back end
 function getPlayerCountry (data) {
     const name = document.getElementById("player-att-country")
     name.outerHTML += data
@@ -120,6 +129,3 @@ function getCpuIndependence(data){
     const expectancy = document.getElementById("cpu-att-independence")
     expectancy.outerHTML += data
 }
-
-fetchPlayerCountryData("France")
-fetchCpuCountryData("Brazil")
