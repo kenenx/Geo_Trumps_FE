@@ -69,15 +69,15 @@ function getCpuCountry (data) {
 }
 
 function getPlayerFlag (country) {
-    const Flag = atob(country);
-    const FlagImg = document.getElementById("player-flag-image");
-    FlagImg.outerHTML +=Flag;
+    const flag = atob(country);
+    const flagImg = document.getElementById("player-flag-image");
+    flagImg.outerHTML +=flag;
 }
 
 function getCpuFlag (country) {
-    const Flag = atob(country);
-    const FlagImg = document.getElementById("cpu-flag-image");
-    FlagImg.outerHTML +=Flag;
+    const flag = atob(country);
+    const flagImg = document.getElementById("cpu-flag-image");
+    flagImg.outerHTML +=flag;
 }
 
 function getPlayerExpectancy(data){
