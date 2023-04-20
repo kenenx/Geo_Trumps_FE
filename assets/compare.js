@@ -130,42 +130,24 @@ function getCpuIndependence(data){
     expectancy.outerHTML += data;
 }
 
+//Style seleted choice
+function changeSelectedStyle(target){
+    const playerElement = document.getElementById(`player-id-${target}`)
+    playerElement.style.color = "#eee"
+    playerElement.style.background = "#442220"
 
-//Compare results
-// if(choice === "life"){
-//     console.log("hello life");
-// } else if (choice === "area"){
-//     console.log("hello area");
-// } else if (choice === "temp"){
-//     console.log("hello temp");
-// } else if (choice === "population"){
-//     console.log("hello pop");
-// } else if (choice === "independence"){
-//     console.log("hello indy");
-// }
-
-
-let cpuValue = 0;
-let playerValue = 0;
-
-async function fetchCpuCountryCompare(country) {
-    const options = {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    }
-
-    await fetch(`https://geo-trumps-api.onrender.com/countries/${country}`, options)
-        .then(res => res.json())
-        .then(data => {
-            cpuValue = data[choice];
-            console.log("asyn cpu " + cpuValue)
-        })
-        .catch(err => console.log(err));
+    const cpuElement = document.getElementById(`cpu-id-${target}`)
+    cpuElement.style.color = "#eee"
+    cpuElement.style.background = "#442220"
 }
+changeSelectedStyle(choice)
 
-async function fetchPlayerCountryCompare(country) {
+
+//Compare player and cpu values
+async function compareValues(playerCountry, cpuCountry) {
+    let cpuValue = 0;
+    let playerValue = 0;
+    
     const options = {
         method: 'GET',
         headers: {
@@ -173,16 +155,39 @@ async function fetchPlayerCountryCompare(country) {
         }
     }
 
-    await fetch(`https://geo-trumps-api.onrender.com/countries/${country}`, options)
+    await fetch(`https://geo-trumps-api.onrender.com/countries/${playerCountry}`, options)
         .then(res => res.json())
         .then(data => {
             playerValue = data[choice];
-            console.log("player cpu " + playerValue)
         })
         .catch(err => console.log(err));
+
+    await fetch(`https://geo-trumps-api.onrender.com/countries/${cpuCountry}`, options)
+        .then(res => res.json())
+        .then(data => {
+            cpuValue = data[choice];
+        })
+        .catch(err => console.log(err));
+
+    if(choice === "independence"){
+        if(playerValue < cpuValue){
+            let winner = document.getElementById("winner-display")
+            winner.textContent = user
+        } else {
+            let winner = document.getElementById("winner-display")
+            winner.textContent = "Computer"
+        }
+    } else {
+        if(playerValue > cpuValue){
+            let winner = document.getElementById("winner-display")
+            winner.textContent = user
+        } else {
+            let winner = document.getElementById("winner-display")
+            winner.textContent = "Computer"
+        }
+    }
 }
 
-fetchCpuCountryCompare(cpu)
-fetchPlayerCountryCompare(player)
-console.log("cpu " + cpuValue)
-console.log("player " + playerValue)
+compareValues(player, cpu)
+
+
