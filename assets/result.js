@@ -1,25 +1,42 @@
-async function fetchScoreData(user) {
+const user = localStorage.getItem('user');
+if (!user) {
+    window.location.href = '../index.html';
+} else {
+    fetchHighScores();
+    console.log(localStorage.getItem("user"));
+    fetchScoreData(localStorage.getItem('user'));
+    addPlayAgainListener();
+}
+
+function addPlayAgainListener() {
+    const button = document.getElementById('play-again-button');
+    button.addEventListener('click', function() {
+        window.location.href = '../select.html';
+    })
+}
+
+
+async function fetchScoreData(username) {
     const options = {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         }
     }
-    await fetch(`https://geo-trumps-api.onrender.com/players/${user}`, options)
+    await fetch(`https://geo-trumps-api.onrender.com/players/${username}`, options)
     .then(resp => resp.json())
     .then(data => {
-         console.log(data)
+        console.log(data)
         const userdata = {
             user: data.user,
             score: data.score
         };
-        const scoreElement = document.getElementById("player-score")
-        scoreElement.textcontent = userdata['score']
-         console.log(userdata["score"])
+        const scoreElement = document.getElementById("player-score");
+        scoreElement.innerHTML = data.score;
+        console.log(username);
     })
 }
 
-// fetchScoreData("Kenen")
 
 async function fetchHighScores(){
     const options = {
@@ -60,5 +77,3 @@ async function fetchHighScores(){
 
     })
 }
-
-fetchHighScores()
