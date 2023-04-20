@@ -133,12 +133,12 @@ function getCpuIndependence(data){
 //Style seleted choice
 function changeSelectedStyle(target){
     const playerElement = document.getElementById(`player-id-${target}`)
-    playerElement.style.color = "#eee"
-    playerElement.style.background = "#442220"
+    playerElement.style.color = "#222"
+    playerElement.style.background = "#B1CF5F"
 
     const cpuElement = document.getElementById(`cpu-id-${target}`)
-    cpuElement.style.color = "#eee"
-    cpuElement.style.background = "#442220"
+    cpuElement.style.color = "#222"
+    cpuElement.style.background = "#B1CF5F"
 }
 changeSelectedStyle(choice)
 
