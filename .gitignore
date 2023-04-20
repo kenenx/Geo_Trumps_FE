@@ -1,7 +1,5 @@
 **/node_modules
 **/package-lock.json
 .DS_Store
-<<<<<<<<< Temporary merge branch 1
 .vscode
 /assets/test.json
->>>>>>>>> Temporary merge branch 2
