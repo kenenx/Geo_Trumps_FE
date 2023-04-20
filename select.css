@@ -1,5 +1,7 @@
 body {
     background-color: #DDDBF1;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 .container {
     display: flex;
