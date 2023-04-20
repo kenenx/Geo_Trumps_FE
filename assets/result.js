@@ -3,7 +3,6 @@ if (!user) {
     window.location.href = '../index.html';
 } else {
     fetchHighScores();
-    console.log(localStorage.getItem("user"));
     fetchScoreData(localStorage.getItem('user'));
     addPlayAgainListener();
 }
@@ -26,15 +25,10 @@ async function fetchScoreData(username) {
     await fetch(`https://geo-trumps-api.onrender.com/players/${username}`, options)
     .then(resp => resp.json())
     .then(data => {
-        console.log(data)
-        const userdata = {
-            user: data.user,
-            score: data.score
-        };
         const scoreElement = document.getElementById("player-score");
         scoreElement.innerHTML = data.score;
-        console.log(username);
     })
+    .catch(err => console.log(err))
 }
 
 
@@ -76,4 +70,5 @@ async function fetchHighScores(){
         score5Element.innerHTML = data[4]["score"]
 
     })
+    .catch(err => console.log(err))
 }
