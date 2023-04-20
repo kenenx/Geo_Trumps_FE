@@ -8,7 +8,9 @@ form.addEventListener('submit', function(event) {
     // Check for username
     if (username.value === '') {
         alert("username must be present");
-    } else {
+    } if (password.value === '') {
+            alert("password must be present");}
+     else {
         login();
     }
     
@@ -26,23 +28,23 @@ async function login() {
 
 
     // Fetch user data from api
-    await fetch(`https://geo-trumps-api.onrender.com/players/${username.value}`, options)
-        .then(res => res.json())
+    await fetch(`https://geo-trumps-api.onrender.com/players/${username.value}/${password.value}`, options)
+        .then(processResponse)
         .then(data => {
             console.log(data);
 
             localStorage.setItem('user', data.user);
 
-            // const userData = {
-            //     'user': data.user,
-            // };
-            // console.log(userData);
-            // var queryString = '?' + Object.keys(userData).map(key => key + '=' + userData[key]).join('&');
-
-            // console.log(queryString);
-
             window.location.href = '../select.html';
         })
         .catch(err => console.log(err))
-    
+}
+function processResponse(resp) {
+    if (resp.ok) {
+      return resp.json();
+    } else {
+      alert("Password is incorrect :(");
+
+      throw "Error: http status code = " + resp.status;
+    }
 }
