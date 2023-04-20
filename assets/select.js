@@ -18,9 +18,9 @@ if (!user) {
 
 
 function addAttributeListeners() {
-    addListener(life, 'life');
+    addListener(life, 'expectancy');
     addListener(area, 'area');
-    addListener(temp, 'temp');
+    addListener(temp, 'temperature');
     addListener(population, 'population');
     addListener(independence, 'independence');
 }
@@ -44,7 +44,7 @@ async function startGame() {
     fillPlayerCountry(playerCountry);
     fillCpuCountry(cpuCountry);
     localStorage.setItem('playerCountry', playerCountry.country);
-    localStorage.setItem('cpuCountry', cpuCountry);
+    localStorage.setItem('cpuCountry', cpuCountry.country);
 
 }
 
