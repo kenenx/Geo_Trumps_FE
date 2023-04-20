@@ -61,3 +61,8 @@ svg{
     max-height: 15rem;
     border-radius: 2em;
 } 
+
+#logo-header{
+    max-width: 40%;
+    margin-top: 1em;
+}
